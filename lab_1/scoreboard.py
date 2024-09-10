@@ -6,7 +6,10 @@ from ship import Ship
 
 
 class Scoreboard():
+	"""A class for displaying game information"""
+
 	def __init__(self, screen, ai_settings, stats):
+		"""Initializes scoring attributes"""
 		self.screen = screen
 		self.ai_settings = ai_settings
 		self.stats = stats
@@ -19,6 +22,7 @@ class Scoreboard():
 		self.prep_ships()
 
 	def prep_score(self):
+		"""Converts the current account into a graphic image"""
 		rounded_score = round(self.stats.score, -1)
 		score_str = "{:,}".format(rounded_score)
 		self.score_image = self.font.render(score_str, True, self.text_color,
@@ -28,6 +32,7 @@ class Scoreboard():
 		self.score_rect.top = 20
 
 	def prep_high_score(self):
+		"""Converts the record score into a graphic image"""
 		rounded_high_score = round(self.stats.high_score, -1)
 		self.stats.high_score = rounded_high_score
 		high_score_str = "{:,}".format(rounded_high_score)
@@ -38,6 +43,7 @@ class Scoreboard():
 		self.high_score_rect.top = 20
 
 	def prep_level(self):
+		"""Converts the level into a graphic image"""
 		self.level_image = self.font.render(str(self.stats.level), True,
 									  		 self.text_color, self.ai_settings.screen_color)
 		self.level_rect = self.level_image.get_rect()
@@ -45,6 +51,7 @@ class Scoreboard():
 		self.level_rect.top = self.score_rect.bottom + 10
 
 	def prep_ships(self):
+		"""Reports the number of remaining ships"""
 		self.ships = Group()
 		for ship_number in range(self.stats.ships_left):
 			ship = Ship(self.screen, self.ai_settings)
@@ -53,6 +60,7 @@ class Scoreboard():
 			self.ships.add(ship)
 
 	def show_score(self):
+		"""Converts the score into a graphic image"""
 		self.screen.blit(self.score_image, self.score_rect)
 		self.screen.blit(self.high_score_image, self.high_score_rect)
 		self.screen.blit(self.level_image, self.level_rect)

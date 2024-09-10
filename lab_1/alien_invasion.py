@@ -12,6 +12,7 @@ from scoreboard import Scoreboard
 
 
 def run_game():
+	"""Initializes the game and creates a screen object"""
 	pygame.init()
 	ai_settings = Settings()
 	screen = pygame.display.set_mode((ai_settings.screen_width,

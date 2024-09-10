@@ -4,7 +4,10 @@ from pygame.sprite import Sprite
 
 
 class Alien(Sprite):
+	"""A class that implements the alien's behavior"""
+
 	def __init__(self, screen, ai_settings):
+		"""Initializes the alien and sets its initial position"""
 		super().__init__()
 		self.screen = screen
 		self.ai_settings = ai_settings
@@ -16,13 +19,16 @@ class Alien(Sprite):
 		self.y = float(self.rect.y)
 
 	def blitme(self):
+		"""Draws the alien in the current position"""
 		self.screen.blit(self.image, self.rect)
 
 	def update(self):
+		"""Updates the position of the alien"""
 		self.x += (self.ai_settings.alien_speed_factor*self.ai_settings.fleet_direction)
 		self.rect.x = self.x
 
 	def check_edges(self):
+		"""Returns True if the alien is at the edge of the screen"""
 		if self.rect.right >= self.screen.get_rect().right:
 			return True
 		elif self.rect.left <= 0:

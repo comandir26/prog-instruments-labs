@@ -4,7 +4,10 @@ from pygame.sprite import Sprite
 
 
 class Ship(Sprite):
+	"""A class that implements the ship's behavior"""
+
 	def __init__(self, screen, ai_settings):
+		"""Initializes the ship and sets its initial position"""
 		super().__init__()
 		self.screen = screen
 		self.ai_settings = ai_settings
@@ -20,9 +23,11 @@ class Ship(Sprite):
 		self.center = float(self.rect.centerx)
 
 	def blitme(self):
+		"""Draws the ship in the current position"""
 		self.screen.blit(self.image, self.rect)
 
 	def update(self):
+		"""Updates the position of the ship"""
 		if self.moving_right and self.rect.right < self.screen_rect.right:
 			self.center += self.ai_settings.ship_speed_factor
 		elif self.moving_left and self.rect.left > 0:
@@ -34,6 +39,7 @@ class Ship(Sprite):
 		self.rect.centerx = self.center
 
 	def center_ship(self):
+		"""Gets the coordinates of the center"""
 		self.rect.centerx = self.screen_rect.centerx
 		self.rect.bottom = self.screen_rect.bottom
 
