@@ -1,4 +1,6 @@
 from game_functions import load_high_score
+
+
 class GameStats():
 	def __init__(self, ai_settings):
 		self.ai_settings = ai_settings

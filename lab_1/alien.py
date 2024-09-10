@@ -1,5 +1,7 @@
 import pygame
+
 from pygame.sprite import Sprite
+
 
 class Alien(Sprite):
 	def __init__(self, screen, ai_settings):

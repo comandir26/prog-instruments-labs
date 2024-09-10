@@ -1,11 +1,15 @@
 import sys
-import pygame
 import json
+
+import pygame
+
+from random import randint
+from time import sleep
+
 from bullet import Bullet
 from alien import Alien
 from star import Star
-from random import randint
-from time import sleep
+
 
 def dump_high_score(stats):
 	filename = "high_score.txt"
