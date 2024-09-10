@@ -5,7 +5,7 @@ from pygame.sprite import Sprite
 
 class Bullet(Sprite):
 	"""A class for controlling bullets fired by a ship"""
-	
+
 	def __init__(self, ai_settings, screen, ship):
 		"""Creates a bullet object at the current position of the ship"""
 		super().__init__()
@@ -26,3 +26,4 @@ class Bullet(Sprite):
 	def draw_bullet(self):
 		"""Displaying a bullet on the screen"""
 		pygame.draw.rect(self.screen, self.color, self.rect)
+ 

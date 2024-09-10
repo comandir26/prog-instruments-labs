@@ -42,5 +42,4 @@ class Ship(Sprite):
 		"""Gets the coordinates of the center"""
 		self.rect.centerx = self.screen_rect.centerx
 		self.rect.bottom = self.screen_rect.bottom
-
-
+ 

@@ -20,3 +20,4 @@ class Star(Sprite):
 	def blitme(self):
 		"""Draws the star in the current position"""
 		self.screen.blit(self.image, self.rect)
+ 

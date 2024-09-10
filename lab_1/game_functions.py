@@ -272,7 +272,4 @@ def check_aliens_bottom(aliens, ai_settings, ship, stats, screen, bullets,
 		if alien.rect.bottom >= screen.get_rect().bottom:
 			ship_hit(aliens, ai_settings, ship, stats, screen, bullets, scoreboard)
 			break
-
-
-
-
+ 
