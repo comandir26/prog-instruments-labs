@@ -18,9 +18,7 @@ def run_game():
 	pygame.display.set_caption("Alien Invasion")
 	play_button = Button(screen, ai_settings, "Play")
 	stats = GameStats(ai_settings)
-
 	scoreboard = Scoreboard(screen, ai_settings, stats)
-
 	ship = Ship(screen, ai_settings)
 	bullets = Group()
 	aliens = Group()
@@ -34,5 +32,6 @@ def run_game():
 			gf.update_bullets(bullets, aliens, screen, ai_settings, ship, scoreboard, stats)
 			gf.update_aliens(aliens, ai_settings, ship, stats, screen, bullets, scoreboard)
 		gf.update_screen(ai_settings, screen, ship, bullets, aliens, stars, stats, play_button, scoreboard)
+
 
 run_game()
