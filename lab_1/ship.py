@@ -28,9 +28,9 @@ class Ship(Sprite):
 		elif self.moving_left and self.rect.left > 0:
 			self.center -= self.ai_settings.ship_speed_factor
 		elif self.moving_up and self.rect.top > self.screen_rect.top:
-			self.rect.bottom-=1
+			self.rect.bottom -= 1
 		elif self.moving_down and self.rect.bottom < self.screen_rect.bottom:
-			self.rect.bottom+=1
+			self.rect.bottom += 1
 		self.rect.centerx = self.center
 
 	def center_ship(self):

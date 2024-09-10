@@ -2,11 +2,11 @@ class Settings():
 	def __init__(self):
 		self.screen_width = 1280
 		self.screen_height = 720
-		self.screen_color = (42,65,127)
+		self.screen_color = (42, 65, 127)
 		self.ship_limit = 3
 		self.bullet_width = 3
 		self.bullet_height = 15
-		self.bullet_color = (203,13,26)
+		self.bullet_color = (203, 13, 26)
 		self.bullets_allowed = 3
 		self.fleet_drop_speed = 7
 		self.speedup_scale = 1.2

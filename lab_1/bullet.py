@@ -16,7 +16,7 @@ class Bullet(Sprite):
 		self.speed_factor = ai_settings.bullet_speed_factor
 
 	def update(self):
-		self.y-=self.speed_factor
+		self.y -= self.speed_factor
 		self.rect.y = self.y
 
 	def draw_bullet(self):
