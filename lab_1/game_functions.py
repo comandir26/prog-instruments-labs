@@ -1,10 +1,10 @@
 import sys
 import json
 
-import pygame
-
 from random import randint
 from time import sleep
+
+import pygame
 
 from bullet import Bullet
 from alien import Alien

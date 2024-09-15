@@ -1,8 +1,8 @@
 import pygame
 
-import game_functions as gf
-
 from pygame.sprite import Group
+
+import game_functions as gf
 
 from settings import Settings
 from ship import Ship
