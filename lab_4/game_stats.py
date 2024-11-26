@@ -4,12 +4,13 @@ from game_functions import load_high_score
 class GameStats():
 	"""A class for tracking statistics"""
 
-	def __init__(self, ai_settings):
+	def __init__(self, ai_settings, logger):
 		"""Initializes statistics"""
 		self.ai_settings = ai_settings
 		self.reset_stats()
 		self.game_active = False
-		self.high_score = load_high_score()
+		self.high_score = load_high_score(logger)
+
 
 	def reset_stats(self):
 		"""Initializes statistics that change during the game"""

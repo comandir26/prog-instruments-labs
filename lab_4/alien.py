@@ -2,6 +2,8 @@ import pygame
 
 from pygame.sprite import Sprite
 
+from paths import ALIEN_IMAGE
+
 
 class Alien(Sprite):
 	"""A class that implements the alien's behavior"""
@@ -11,7 +13,7 @@ class Alien(Sprite):
 		super().__init__()
 		self.screen = screen
 		self.ai_settings = ai_settings
-		self.image = pygame.image.load("lab_1/images/alien11.png")
+		self.image = pygame.image.load(ALIEN_IMAGE)
 		self.rect = self.image.get_rect()
 		self.rect.x = self.rect.width
 		self.rect.y = self.rect.height

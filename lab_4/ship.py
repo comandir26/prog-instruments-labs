@@ -2,6 +2,8 @@ import pygame
 
 from pygame.sprite import Sprite
 
+from paths import SHIP_IMAGE
+
 
 class Ship(Sprite):
 	"""A class that implements the ship's behavior"""
@@ -11,7 +13,7 @@ class Ship(Sprite):
 		super().__init__()
 		self.screen = screen
 		self.ai_settings = ai_settings
-		self.image = pygame.image.load("lab_1/images/ship119x96.png")
+		self.image = pygame.image.load(SHIP_IMAGE)
 		self.rect = self.image.get_rect()
 		self.screen_rect = screen.get_rect()
 		self.rect.centerx = self.screen_rect.centerx

@@ -1,0 +1,8 @@
+INFO | game_functions | load_high_score | The highest score was succesfully uploaded
+INFO | main | run_game | The creation and configuration of the game is completed
+INFO | game_functions | check_play_button | The game has turned to active mode
+INFO | game_functions | check_bullets_aliens_collisions | The difficulty level of the game has increased
+INFO | game_functions | check_bullets_aliens_collisions | The difficulty level of the game has increased
+INFO | game_functions | ship_hit | The collision of the ship with the aliens, 			  2 ships left
+INFO | game_functions | ship_hit | The collision of the ship with the aliens, 			  1 ships left
+INFO | game_functions | dump_high_score | The highest score was succesfully saved

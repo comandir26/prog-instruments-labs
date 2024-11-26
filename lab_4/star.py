@@ -2,6 +2,8 @@ import pygame
 
 from pygame.sprite import Sprite
 
+from paths import STAR_IMAGE
+
 
 class Star(Sprite):
 	"""A class that implements the star"""
@@ -10,7 +12,7 @@ class Star(Sprite):
 		"""Initializes the attributes of the star"""
 		super().__init__()
 		self.screen = screen
-		self.image = pygame.image.load("lab_1/images/starsmall.png")
+		self.image = pygame.image.load(STAR_IMAGE)
 		self.rect = self.image.get_rect()
 		self.rect.x = self.rect.width
 		self.rect.y = self.rect.height
