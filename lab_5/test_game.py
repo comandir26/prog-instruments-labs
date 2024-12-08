@@ -101,6 +101,8 @@ def test_load_dump_high_score(init_settings):
     dump_high_score(stats, TEST_HIGH_SCORE)
     loaded_high_score = load_high_score(TEST_HIGH_SCORE)
     assert loaded_high_score == 25000
+    stats.high_score = 10000
+    dump_high_score(stats, TEST_HIGH_SCORE)
 
 
 def test_center_ship(init_settings):
